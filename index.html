@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0; 
+            background-color: #f8f9fa; 
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px; 
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        #unique-paragraph {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        body {
+            background: linear-gradient(to bottom, #f8f9fa, #265ecd);
+        }
+
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin-top: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Simple Web Page</h1>
+
+    <p>This is a paragraph of text. It demonstrates basic text styling.</p>
+
+    <p class="highlight">This paragraph has a highlighted style.</p>
+
+    <p id="unique-paragraph">This paragraph has a unique ID and special styling.</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+    <a href="/kitty.html">Click here to see something better</a>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?cs=srgb&dl=pexels-pixabay-206359.jpg&fm=jpg" alt="Placeholder Image">
+
+    <div class="card">
+        <div class="card-title">Contact Form</div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you for reaching out! We’ll get back to you soon.');
+  form.reset();
+});
+</script>
+
+</body>
+</html>
